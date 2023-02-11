@@ -25,7 +25,7 @@ void salesread(const char* months[], float* sales){
 
   printf("Month\tSales\n");
   for(i=0;i<12;i++){
-    printf("%-9s\t%8f\n",months[i],sales[i]);
+    printf("%-9s\t%8.2f\n",months[i],sales[i]);
   }
   return;
 }
@@ -54,8 +54,8 @@ void summary(float* sales, const char* months[])
 
       }
     }
-  printf("minimum sales: %8f (%s)\n", min, months[indexofmin]);
-  printf("maximum sales: %8f (%s)\n", max, months[indexofmax]);
+  printf("minimum sales: %8.2f (%s)\n", min, months[indexofmin]);
+  printf("maximum sales: %8.2f (%s)\n", max, months[indexofmax]);
 
   // average
   float total = 0;
@@ -64,7 +64,7 @@ void summary(float* sales, const char* months[])
     total += sales[i];
   }
   average = total/12;
-  printf("Average Sales: %f\n", average);
+  printf("Average Sales: %.2f\n", average);
 }
 
 void sixmonth(float* sales, const char* months[]){
@@ -79,7 +79,7 @@ void sixmonth(float* sales, const char* months[]){
       sum += sales[j];
     }
     average = sum/6;
-    printf("%-10s\t - \t%-10s\t%-12f\n",months[i],months[j-1],average);
+    printf("%-10s\t - \t%-10s\t%-12.2f\n",months[i],months[j-1],average);
   }
 
 }
@@ -124,7 +124,7 @@ void salessort(float* sales, const char* months[]){
   }
 
   for (int i = 0; i<12;++i){
-    printf("%-10s\t%-10f\n", monthsorted[i], copysales[i]);
+    printf("%-10s\t%-10.2f\n", monthsorted[i], copysales[i]);
   }
 }
 
