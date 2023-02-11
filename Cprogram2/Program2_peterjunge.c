@@ -16,7 +16,7 @@ int main(){
         printf("Enter 0 or 1 to stop combonation generator\n");
         printf("Enter a Football score: ");
         scanf("%d",&score);
-        printf("Possble scoring combonations for this score");
+        printf("Possble scoring combonations for this score\n");
         for (int i = 0; i < score; i++){
             for(int k = 0; k < score; k++){
                 for(int l = 0; l < score; l++){
